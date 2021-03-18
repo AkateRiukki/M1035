@@ -1,0 +1,140 @@
+//Archived Mission No.1035: The floating carrier
+//Parties involved: 1st and 2nd Top Operator, Prime Squad, AITA
+
+//By: Akate Riukki
+
+import java.util.Scanner;
+
+public class Main
+{
+	public static void main(String[] args) {
+		
+		//Declaration
+		int role = 0;
+		int cHull = 0;
+		int mBridge = 0;
+		int eEnemy = 0;
+		char movement;
+		
+		//Scanner
+		Scanner input = new Scanner(System.in);
+		
+		//Story (Part 1)
+		System.out.println("It was a hot sunny day.");
+		System.out.println(" ");
+		System.out.println("The carrier hovered above the clouds, as several of our transport starships");
+		System.out.println("were positioned at each of the carrier's vertices.");
+		System.out.println(" ");
+		System.out.println("We are all ready in position to rescue those who are taken hostage in the floating behemoth.");
+		System.out.println("--------------------------------------------------------------------------------------------");
+		System.out.println(" ");
+		
+		//Scanner input
+		System.out.println("Please select your role [1: 1st Top Operator; 2: 2nd Top Operator; 3: Prime Squad]: ");
+		role = input.nextInt();
+		
+
+		//if else if Statement
+		if (role == 1){
+		    System.out.println("You have chosen the role 1st Top Operator!");
+		    System.out.println(" ");
+		    
+		    //Choice
+		    System.out.println("Order Prime Squad to clear the hull? [1: Yes; 2: No]: ");
+		    cHull = input.nextInt();
+		    
+		    //if else Statement
+		    if (cHull == 1){
+		        System.out.println("Prime Squad, clear the hull and locate the captives.");
+		    }
+		    else{
+		        System.out.println("Prime Squad, hold your positions. I'll clear the hull.");
+		    }
+		}
+		else if (role == 2){
+		    System.out.println("You have chosen the role 2nd Top Operator!");
+		    System.out.println(" ");
+		    
+		    //Choice
+		    System.out.println("Move closer towards the bridge? [1:Yes; 2:No]");
+		    mBridge = input.nextInt();
+		    
+		    //if else Statement
+		    if (mBridge == 1){
+		        System.out.println("Akate moving to clear the bridge.");
+		    }
+		    else{
+		        System.out.println("I'll set myself cozy here watching from afar yea?");
+		    }
+		    
+		}
+		else if (role == 3){
+		    System.out.println("You have chosen the role Prime Squad!");
+		    System.out.println(" ");
+		    
+		    //Choice
+		    System.out.println("Start engaging the enemy? [1:Yes; 2:No");
+		    eEnemy = input.nextInt();
+		    
+		    //if else Statement
+		    if (eEnemy == 1){
+		        System.out.println("Prime Squad moving in!");
+		    }
+		    else{
+		        System.out.println("Prime Squad take point and clear the area!");
+		    }
+		    
+		}
+		else{
+		    System.out.println(" ");
+		}
+		
+		//Story (Part 2)
+		System.out.println("The operation begun in silence.");
+		System.out.println(" ");
+		System.out.println("The carrier defense systems were shut down throughout the operation.");
+		System.out.println(" ");
+		System.out.println("They have located the hostages.");
+		System.out.println("--------------------------------------------------------------------------------------------");
+		System.out.println(" ");
+		
+		//Choice
+		System.out.println("Who will move in first? [1: 1st Top Operator; 2: 2nd Top Operator; 3: Prime Squad]: ");
+		movement = input.next().charAt(0);
+		
+		//switch case Statement
+		switch (movement)
+		{
+		    case '1':
+		        System.out.println("James Ackerman moves in first!");
+		        System.out.println(" ");
+		    break;
+		    
+		    case '2':
+		        System.out.println("Akate Riukki moves in first!");
+		        System.out.println(" ");
+		    break;
+		    
+		    case '3':
+		        System.out.println("Prime Squad pushing in!");
+		        System.out.println(" ");
+		    break;
+		    
+		    default:
+		        System.out.println("Everyone rushed in and positions themselves.");
+		        System.out.println(" ");
+            return;
+		}
+		
+		//Story (Part 3)
+		System.out.println("The task forces were under heavy fire, but manages to rescue all hostages.");
+        System.out.println(" ");
+		System.out.println("The transport starships decends and picks up the hostages.");
+		System.out.println(" ");
+		System.out.println("The task forces also board the transport starships, fleeing the scene.");
+		System.out.println(" ");
+		System.out.println("The End (For this coding at least)");
+		
+		
+	}
+}
